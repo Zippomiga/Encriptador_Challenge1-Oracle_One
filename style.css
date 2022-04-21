@@ -185,7 +185,7 @@ footer {
     .botonEncriptar,
     .botonDesencriptar,
     .botonCopiar {
-        margin: 2px 0;
+        margin: 3px 0;
         font-size: 14px;
         letter-spacing: 4px;
     }
