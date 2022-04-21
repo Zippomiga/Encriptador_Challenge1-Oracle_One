@@ -1,2 +1,2 @@
-# Encriptador_Challenge1-Oracle_One
+# Encriptador
 Es un programa que encripta y desencripta texto, permitiendo sólo minúsculas
