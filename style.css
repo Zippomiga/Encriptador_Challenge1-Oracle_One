@@ -52,7 +52,7 @@ textarea {
     border-radius: 10px;
     resize: none;
     letter-spacing: 3px;
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color: rgba(0, 0, 0, 0.8);
     cursor: text;
 }
 
@@ -83,7 +83,7 @@ textarea:focus {
 .botonDesencriptar,
 .botonCopiar {
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color: rgba(0, 0, 0, 0.9);
     width: 100%;
     font-size: 20px;
     color: green;
@@ -147,10 +147,6 @@ footer {
 /* MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA */
 
 @media screen and (max-width: 700px) {
-
-    html {
-        background: rgb(0, 0, 0);
-    }
 
     .contenedor_cajas {
         flex-direction: column;
