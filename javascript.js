@@ -4,10 +4,14 @@ function encriptarTexto () {
 
     if (validarCaracteres(texto) == true) {
         var textoEncriptado = texto.replace(/e/g, 'enter').replace(/i/g, 'imes').replace(/a/g, 'ai').replace(/o/g, 'ober').replace(/u/g, 'ufat');
+        document.querySelector('#area-texto').style.border = "1px solid green";
+        document.querySelector('#area-texto2').style.border = "1px solid green";
     } 
 
     else {
         textoEncriptado = "Caracter inválido";
+        document.querySelector('#area-texto').style.border = "1px solid darkred";
+        document.querySelector('#area-texto2').style.border = "1px solid darkred";
     }
     
     document.querySelector('#area-texto2').value = textoEncriptado;
@@ -22,7 +26,7 @@ function desencriptarTexto () {
     var texto = document.querySelector('#area-texto').value;
 
     if (validarCaracteres(texto) == true) {
-    var textoDesencriptado = texto.replace(/enter/g, 'e').replace(/imes/g, 'i').replace(/ai/g, 'a').replace(/ober/g, 'o').replace(/ufat/g, 'u');
+        var textoDesencriptado = texto.replace(/enter/g, 'e').replace(/imes/g, 'i').replace(/ai/g, 'a').replace(/ober/g, 'o').replace(/ufat/g, 'u');
     }
     
     else {
