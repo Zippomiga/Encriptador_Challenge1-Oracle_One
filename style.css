@@ -19,7 +19,7 @@ html {
     padding: 4px;
     font-size: 50px;
     font-weight: 100;
-    letter-spacing: 10px;
+    letter-spacing: 4px;
     color: rgb(0, 170, 0);
     animation: titulo 0.4s;
 }
@@ -90,7 +90,7 @@ textarea:focus {
 .botonDesencriptar,
 .botonCopiar {
     padding: 10px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.8);
     width: 100%;
     font-size: 20px;
     color: green;
@@ -124,15 +124,11 @@ footer {
     background-color: rgba(0, 0, 0, 0.9);
     color: rgb(255, 255, 255);
     font-style: italic;
+    text-align: center;
 }
 
 .copyright {
     margin-top: 10px;
-    text-align: center;
-}
-
-.redes {
-    text-align: center;
 }
 
 .imgRedes {
@@ -155,6 +151,19 @@ footer {
     }
 }
 
+::-webkit-scrollbar {
+    background: black;
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 128, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: green;
+}
+
 /* MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA */
 
 @media screen and (max-width: 720px) {
@@ -168,10 +177,7 @@ footer {
     }
 
     #titulo {
-        margin: auto;
-        display: flex;
-        justify-content: center;
-        font-size: 26px;
+        font-size: 22px;
     }
 
     #area-texto,
@@ -198,6 +204,22 @@ footer {
     .botonEncriptar,
     .botonDesencriptar {
         width: 50%;
+    }
+
+    button:active {
+        background-color: rgb(255, 255, 255);
+        color: black;
+        letter-spacing: 4px;
+        transition: 0.1s letter-spacing;
+    }
+
+    .copyright {
+        font-size: 14px;
+    }
+
+    .imgRedes {
+        width: 30px;
+        height: auto;
     }
 
 }
