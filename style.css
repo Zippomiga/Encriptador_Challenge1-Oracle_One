@@ -9,25 +9,32 @@ html {
     background-attachment: fixed;
     background-size: cover;
     font-family: "Chakra Petch";
+    overflow-x: hidden;
 }
 
 #titulo {
     margin: 0;
-    display: flex;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-top: 1px solid rgba(15, 15, 15);
-    border-bottom: 1px solid rgb(15, 15, 15);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.9);
     padding: 4px;
-    font-size: 30px;
-    font-weight: 500;
-    letter-spacing: 8px;
+    font-size: 50px;
+    font-weight: 100;
+    letter-spacing: 10px;
     color: rgb(0, 170, 0);
+    animation: titulo 0.4s;
+}
+
+#titulo::selection {
+    background: none;
 }
 
 
 span {
     color: rgb(49, 49, 49);
+}
+
+span::selection {
+    background: none;
 }
 
 .contenedor_cajas {
@@ -40,25 +47,25 @@ span {
 }
 
 ::selection {
-    background-color: rgba(0, 128, 0, 0.5);
+    background-color: rgba(0, 128, 0, 0.2);
 }
 
 textarea {
+    margin: 0;
     width: 100%;
     height: 500px;
     color: white;
     padding: 16px;
-    border: 1px dashed green;
-    border-radius: 10px;
+    border: 1px solid rgba(0, 128, 0, 0.2);
     resize: none;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     background-color: rgba(0, 0, 0, 0.8);
     cursor: text;
 }
 
 textarea:focus {
     outline: none;
-    border: 2px solid green;
+    border: 1px solid green;
 }
 
 .caja1 {
@@ -83,13 +90,12 @@ textarea:focus {
 .botonDesencriptar,
 .botonCopiar {
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgb(0, 0, 0);
     width: 100%;
     font-size: 20px;
     color: green;
-    border: 2px groove green;
-    border-radius: 10px;
-    letter-spacing: 6px;
+    border: none;
+    letter-spacing: 2px;
     text-transform: uppercase;
 }
 
@@ -109,44 +115,49 @@ button:hover {
 button:active {
     background-color: rgb(255, 255, 255);
     color: black;
+    letter-spacing: 20px;
+    transition: 0.1s letter-spacing;
 }
 
 footer {
-    display: flex;
     padding: 4px;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-top: 1px solid rgba(15, 15, 15);
-    border-bottom: 1px solid rgb(15, 15, 15);
+    background-color: rgba(0, 0, 0, 0.9);
     color: rgb(255, 255, 255);
-    font-size: 14px;
-    letter-spacing: 1px;
     font-style: italic;
 }
 
 .copyright {
-    margin: auto;
-    justify-content: center;
+    margin-top: 10px;
+    text-align: center;
 }
 
 .redes {
-    margin: auto 6px;
-    justify-content: flex-end;
+    text-align: center;
 }
 
 .imgRedes {
-    vertical-align: middle;
     cursor: pointer;
-    width: 28px;
+    width: 40px;
     height: auto;
+    margin: 20px 20px 0;
+    transition: 0.2s all;
+    filter: invert();
 }
 
 .imgRedes:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
+}
+
+@keyframes titulo {
+
+    100% {
+        transform: skewX(180deg);
+    }
 }
 
 /* MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA */
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 720px) {
 
     .contenedor_cajas {
         flex-direction: column;
@@ -160,7 +171,7 @@ footer {
         margin: auto;
         display: flex;
         justify-content: center;
-        font-size: 20px;
+        font-size: 26px;
     }
 
     #area-texto,
@@ -175,24 +186,18 @@ footer {
     }
 
     .botones {
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .botonEncriptar,
     .botonDesencriptar,
     .botonCopiar {
-        margin: 3px 0;
         font-size: 14px;
-        letter-spacing: 4px;
     }
 
-    footer {
-        font-size: 10px;
-    }
-
-    .imgRedes {
-        width: 14px;
-        height: auto;
+    .botonEncriptar,
+    .botonDesencriptar {
+        width: 50%;
     }
 
 }
