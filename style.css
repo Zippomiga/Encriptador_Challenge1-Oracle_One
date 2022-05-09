@@ -166,7 +166,7 @@ footer {
 
 /* MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA */
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 768px) {
 
     .contenedor_cajas {
         flex-direction: column;
